@@ -1,3 +1,8 @@
+
+
+// yarn tsm src (the folder that holds the stuff you want definitions of )
+
+
 .title {
     flex: 2;
     font-size: 10rem;
@@ -24,10 +29,12 @@
     flex: 1;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    padding: 10rem;
     
 }

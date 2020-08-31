@@ -10,6 +10,7 @@ const useStyles = makeStyles({
   root: {
     minWidth: 275,
     maxWidth: 343,
+    justifyContent: 'center'
   },
   bullet: {
     display: 'inline-block',
@@ -24,26 +25,15 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard() {
+const SimpleCard: React.FC<{title: string}> = ({title}) => {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.root}>
       <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Quotes
-        </Typography>
-        <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
-        </Typography>
-        <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+        <Typography className={classes.title} color="textPrimary" gutterBottom>
+          {title}
         </Typography>
       </CardContent>
       <CardActions>
@@ -52,3 +42,5 @@ export default function SimpleCard() {
     </Card>
   );
 }
+
+export default SimpleCard;
