@@ -13,6 +13,7 @@ import WorkPage from './pages/WorkPage'
 import ProjectsPage from './pages/ProjectsPages'
 import ArtPage from './pages/ArtPage'
 import AboutPage from './pages/AboutPage'
+import InterestsPage from './pages/InterestsPage'
 
 //  Router basename={process.env.PUBLIC_URL}
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/projects' component={ProjectsPage} exact/>
         <Route path='/art' component={ArtPage} exact/>
         <Route path='/about' component={AboutPage} exact/>
+        <Route path='/interests' component={InterestsPage} exact/>
       </Switch>
       {/* <LandingPage title={'Grant Brewster'}/> */}
     </div>

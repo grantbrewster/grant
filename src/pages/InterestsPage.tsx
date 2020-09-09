@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 // yarn tsm src (the folder that holds the stuff you want definitions of )
 
-const WorkPage: React.FC = () => {
+const InterestsPage: React.FC = () => {
 
     const history = useHistory();
 
@@ -12,19 +12,18 @@ const WorkPage: React.FC = () => {
         <div>
             <Button onClick={() => history.push('/')}>Home</Button>
             <div className={styles.container}>
-                <h1>Where have I worked?</h1>
+                <h1>Interests</h1>
                 <div className={styles.navRows}>
-                    <h2>X, The Moonshot Factory, SWE Intern on ML-infra and Data Science Teams</h2>
-                        <h3>Tech Used:</h3>
-                            <h4>ProtoBufs, Tensorflow 2, ML Interpretability, Pandas, GeoPandas, Google Cloud Storage,
-                                QGIS, Python, Google's BERT, UNet
+                    <h2>Surfing</h2>
+                        <h3>Things Learned:</h3>
+                            <h4>The degradation of our environment, including our oceans, is the most important problem facing our existence. 
                             </h4>
-                    <h2>Mlkmn Technologies, Founding SWE</h2>
+                    <h2>Snowboarding</h2>
                         <h3>Tech Used:</h3>
                                 <h4>Firebase, AWS, Stripe, Typeform, React, Vue.js, Javascript/HTML/CSS
                                 </h4>
-                    <h2>Trumid Financial, LLC, Rotational Intern</h2>
-                        <h3>Tech Used:</h3>
+                    <h2>Venture Capital</h2>
+                        <h3>Learnings:</h3>
                                     <h4> Flask, Redis, D3, Javascript/HTML/CSS, Kafka, ProtoBufs, Docker, SocketIO
                                     </h4>
                     <h2>Moe's Delivery Driver, Catering Driver</h2>
@@ -41,4 +40,4 @@ const WorkPage: React.FC = () => {
     );
 }
 
-export default WorkPage;
+export default InterestsPage;
