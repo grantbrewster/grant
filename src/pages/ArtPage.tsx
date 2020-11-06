@@ -9,11 +9,15 @@ const ArtPage: React.FC = () => {
     const history = useHistory();
 
     return (
-        // just do a carousel or something here
-        <div >
+        // just do a carousel or something her
+        <div>
             <Button onClick={() => history.push('/')}>Home</Button>
-            <h1>Art</h1>
-            
+            <div >
+                <h1>Art</h1>
+                <h2>
+                    <a href='https://grantbrewster.wixsite.com/mysite'>Art Portfolio site</a>
+                    </h2>
+            </div>
         </div>
     );
 }

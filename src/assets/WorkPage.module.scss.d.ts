@@ -1,3 +1,5 @@
+export const collapsible: string;
+export const collapsibleContentOuter: string;
 export const container: string;
 export const navRows: string;
 export const title: string;

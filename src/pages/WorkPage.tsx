@@ -2,7 +2,10 @@ import React from 'react';
 import styles from '../assets/WorkPage.module.scss';
 import { Link, useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
+import Collapsible from 'react-collapsible';
 // yarn tsm src (the folder that holds the stuff you want definitions of )
+import '../assets/WorkPage.module.scss';
+// maybe import app.css?
 
 const WorkPage: React.FC = () => {
 
@@ -15,10 +18,13 @@ const WorkPage: React.FC = () => {
                 <h1>Where have I worked?</h1>
                 <div className={styles.navRows}>
                     <h2>X, The Moonshot Factory, SWE Intern on ML-infra and Data Science Teams</h2>
+                    <Collapsible trigger="More">
                         <h3>Tech Used:</h3>
-                            <h4>ProtoBufs, Tensorflow 2, ML Interpretability, Pandas, GeoPandas, Google Cloud Storage,
+                            <p>ProtoBufs, Tensorflow 2, ML Interpretability, Pandas, GeoPandas, Google Cloud Storage,
                                 QGIS, Python, Google's BERT, UNet
-                            </h4>
+                            </p>
+                        </Collapsible>
+
                     <h2>Mlkmn Technologies, Founding SWE</h2>
                         <h3>Tech Used:</h3>
                                 <h4>Firebase, AWS, Stripe, Typeform, React, Vue.js, Javascript/HTML/CSS
