@@ -39,6 +39,20 @@
     
 }
 
+.continerMember {
+    align-items: center; /* NEW */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    height: 4.2rem;
+    list-style: none;
+    padding: 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    overflow: hidden;
+  }
 
 .Collapsible {
     align-content: center;

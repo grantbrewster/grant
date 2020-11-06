@@ -57,7 +57,7 @@ const LandingPage: React.FC<{ title: string }> = ({ title }) => {
 
     return (
         <div className={styles.container}>
-            <h1 id='test' className={styles.title} onClick={() => history.push('/about')} >Grant Brewster</h1>
+            <h1 id='test' className={styles.title} onClick={() => history.push('/')} >Grant Brewster</h1>
             <div className={styles.navRows}>
                 <Button classes={{ 'root': styles.workButton, 'label': styles.workLabel }}
                     onClick={handleClick}

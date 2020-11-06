@@ -15,13 +15,24 @@ const AboutPage: React.FC = () => {
         <div>
             <Button onClick={() => history.push('/')}>Home</Button>
             <div className={styles.container}>
+                
                 <h1>About Page</h1>
-                <h2>Check out my LinkedIn, Github, WixSite(lol), YouTube, Spotify, or my resume if you choose.</h2>
-                <Card title={'Songs'} />
-                <Card title={'Quotes'} />
-                <Card title={'Problems Worth Solving'} />
-                <Card title={'Books'} />
-                <Card title={'Social'} />
+                <h2>Check out my LinkedIn, Github, WixSite, YouTube, Spotify, or my resume if you choose.</h2>
+                <ul style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}>
+                    <div>
+                        <Card title={'Songs'} />
+                    </div>
+                    <li>
+                        <Card title={'Quotes'} />
+                    </li>
+                    <Card title={'Problems Worth Solving'} />
+                    <Card title={'Books'} />
+                    <Card title={'Social'} />
+                </ul>
             </div>
         </div>
     );

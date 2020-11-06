@@ -9,7 +9,6 @@ const ArtPage: React.FC = () => {
     const history = useHistory();
 
     return (
-        // just do a carousel or something her
         <div>
             <Button onClick={() => history.push('/')}>Home</Button>
             <div >
