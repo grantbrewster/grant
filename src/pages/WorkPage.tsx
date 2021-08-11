@@ -15,7 +15,7 @@ const WorkPage: React.FC = () => {
 
     return (
         <div>
-            <Button onClick={() => history.push('/')}>Home</Button>
+            <Button classes={{ 'root': styles.workButton,  'label': styles.workLabel}} onClick={() => history.push('/')}>Home</Button>
             <div className={styles.container}>
                 <h1>Where have I worked?</h1>
                 <div className={styles.navRows}>
