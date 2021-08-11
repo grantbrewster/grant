@@ -72,7 +72,6 @@ const LandingPage: React.FC<{ title: string }> = ({ title }) => {
                     onMouseEnter={() => handleHoverArt(true)}
                     onMouseLeave={() => handleHoverArt(false)}>art</Button>
             </div>
-
         </div>
 
     );
