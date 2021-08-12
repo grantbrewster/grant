@@ -2,9 +2,15 @@ import React from 'react';
 import styles from '../assets/WorkPage.module.scss';
 import { Link, useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
+import CodeIcon from '@material-ui/icons/Code';
+import PhotoIcon from '@material-ui/icons/Photo';
 import Collapsible from 'react-collapsible';
+import HomeIcon from '@material-ui/icons/Home';
 // yarn tsm src (the folder that holds the stuff you want definitions of )
 import '../assets/WorkPage.module.scss';
+
+import NavBar from './NavBar';
+
 // maybe import app.css?
 
 const WorkPage: React.FC = () => {
@@ -15,7 +21,10 @@ const WorkPage: React.FC = () => {
 
     return (
         <div>
-            <Button classes={{ 'root': styles.workButton,  'label': styles.workLabel}} onClick={() => history.push('/')}>Home</Button>
+            <NavBar />
+            <div> Work Experience</div>
+            <div> Research Experience</div>
+            <div> School Involvement</div>
             <div className={styles.container}>
                 <h1>Where have I worked?</h1>
                 <div className={styles.navRows}>

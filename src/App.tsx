@@ -14,23 +14,25 @@ import ProjectsPage from './pages/ProjectsPages'
 import ArtPage from './pages/ArtPage'
 import AboutPage from './pages/AboutPage'
 import InterestsPage from './pages/InterestsPage'
+import Typography from '@material-ui/core/Typography';
 
 //  Router basename={process.env.PUBLIC_URL}
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    
     <div className="App">
-      <Switch>
-        <Route path='/' component={LandingPage} exact/>
-        <Route path='/work' component={WorkPage} exact/>
-        <Route path='/projects' component={ProjectsPage} exact/>
-        <Route path='/art' component={ArtPage} exact/>
-        <Route path='/about' component={AboutPage} exact/>
-        <Route path='/interests' component={InterestsPage} exact/>
-      </Switch>
-      {/* <LandingPage title={'Grant Brewster'}/> */}
+      <Router basename={process.env.PUBLIC_URL}>
+        <Switch>
+          <Route path='/' component={LandingPage} exact/>
+          <Route path='/work' component={WorkPage} exact/>
+          <Route path='/projects' component={ProjectsPage} exact/>
+          <Route path='/art' component={ArtPage} exact/>
+          <Route path='/about' component={AboutPage} exact/>
+          <Route path='/interests' component={InterestsPage} exact/>
+        </Switch>
+      </Router>
     </div>
-    </Router>
+    
   );
 }
 

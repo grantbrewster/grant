@@ -4,6 +4,7 @@ import styles from '../assets/WorkPage.module.scss';
 
 import { Link, useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
+import NavBar from './NavBar'
 
 // yarn tsm src (the folder that holds the stuff you want definitions of )
 
@@ -13,7 +14,7 @@ const AboutPage: React.FC = () => {
 
     return (
         <div>
-            <Button onClick={() => history.push('/')}>Home</Button>
+            <NavBar/>
             <div className={styles.container}>
                 
                 <h1>About Page</h1>
@@ -23,15 +24,11 @@ const AboutPage: React.FC = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                 }}>
-                    <div>
-                        <Card title={'Songs'} />
-                    </div>
-                    <li>
-                        <Card title={'Quotes'} />
-                    </li>
-                    <Card title={'Problems Worth Solving'} />
-                    <Card title={'Books'} />
-                    <Card title={'Social'} />
+                    <Card title={'Songs'} content={['Song 1', 'Song 2']} /> 
+                    <Card title={'Quotes'} content={['Here', 'There']}/>
+                    <Card title={'Problems Worth Solving'} content={['hello', 'yes']}/>
+                    <Card title={'Books'} content={['hello', 'yes']}/>
+                    <Card title={'Social'} content={['hello', 'yes']}/>
                 </ul>
             </div>
         </div>

@@ -5,34 +5,29 @@
     justify-content: center;
 }
 
-.workButton{
-    
-    flex: 1 / 3;
+.workButton {
     // color: black;
-    
     .workLabel {
-        padding: 30px;
         font-size: 3rem;
         color: black;
     }
-
     .darkLabel {
-        padding: 30px;
         font-size: 3rem;
-        color: white;
+        color: greenyellow;
+        // font-family: monospace;
     }
-
 }
 
 .navRows {
-    padding:5px;
+    padding: 5px;
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
 .container {
-    display: position;
+    position: center;
+    display: center;
     flex-direction: column;
 }
 
@@ -42,7 +37,6 @@
     color: black;
     background-color: black;
 }
-
 
 .workFont {
     @extend .title;
@@ -58,6 +52,6 @@
 
 .artFont {
     @extend .title;
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     // color:lightcoral;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { Button } from '@material-ui/core';
+import NavBar from './NavBar';
 
 // yarn tsm src (the folder that holds the stuff you want definitions of )
 
@@ -10,7 +11,8 @@ const ArtPage: React.FC = () => {
 
     return (
         <div>
-            <Button onClick={() => history.push('/')}>Home</Button>
+            {/* <Button onClick={() => history.push('/')}>Home</Button> */}
+            <NavBar />
             <div >
                 <h1>Art</h1>
                 <h2>

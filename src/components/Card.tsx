@@ -5,26 +5,18 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Collapsible from 'react-collapsible';
+import { Grid } from '@material-ui/core';
 
-// .continerMember {
-//   align-items: center; /* NEW */
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: wrap;
-//   align-content: center;
-//   justify-content: center;
-//   height: 4.2rem;
-//   list-style: none;
-//   padding: 0;
-//   border: 1px solid #000;
-//   border-radius: 5px;
-//   overflow: hidden;
-// }
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 275,
-    maxWidth: 343,
+    minWidth: '20vh',
+    maxWidth: '50vh',
     justifyContent: 'center',
     justifyItems: 'center'
   },
@@ -42,19 +34,35 @@ const useStyles = makeStyles({
   
 });
 
-const SimpleCard: React.FC<{title: string}> = ({title}) => {
+const SimpleCard: React.FC<{title: string, content:Array<String>}> = ({title, content}) => {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
+
+
+  const Trigger = () => <Button size="small">Learn More</Button>;
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={{maxWidth: '100vh'}}>
       <CardContent>
-        <Typography className={classes.title} color="textPrimary" gutterBottom>
+        <Typography variant='h4' color="textPrimary" gutterBottom>
           {title}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Grid
+            container
+            direction="column"
+            justify="flex-start"
+            alignItems="stretch"
+          >
+        <Collapsible trigger={<Trigger/>}>
+          <Grid item>
+            <List dense={true}>
+              {content.map((item, i) => 
+                <ListItem divider={true} >{item}</ListItem>)}
+            </List>
+          </Grid>
+        </Collapsible>
+        </Grid>
       </CardActions>
     </Card>
   );
